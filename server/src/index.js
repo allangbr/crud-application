@@ -30,7 +30,7 @@ app.post("/createManyGames", async (req, res) => {
     res.json(games);
 });
 
-app.get("/", async (req, res) => {
+app.get("/get", async (req, res) => {
     const games = await prisma.game.findMany();
     res.json(games);
 });
@@ -45,11 +45,11 @@ app.get("/ById/:id", async (req, res) => {
     res.json(game);
 });
 
-app.put("/", async (req, res) => {
+app.put("/update", async (req, res) => {
     const {id, name, cost, category} = req.body;
     const updateGame = await prisma.game.update({
         where: {
-            id: id,
+            id: Number(id),
         },
         data: {
             name: name,
