@@ -20,20 +20,26 @@ npm install
 
 2. Após instalar as dependencias do Client, navegue até a pasta "server" e utilize o mesmo comando do passo anterior.
 
-3. Após as dependências terem sido instaladas, ainda na pasta "server", acesse a pasta "prisma" e no arquivo "schema.prisma" altere o provedor e a url para a do seu banco de dados, exemplo:
+3. Após as dependências terem sido instaladas, ainda na pasta "server", crie um arquivo chamado .env e dentro dele, adicione a variavel DATABASE_URL com a URL configurada do seu Banco de Dados como no modelo a seguir:
 
 <img width="800" height="auto" src="./assets/img/prismaConnection.png" >
 
-4. Após as dependências terem sido instaladas, ainda na pasta "server" execute o BackEnd:
+4. Após isso, ainda na pasta "server" execute o seguinte comando:
+
+```console
+npx prisma generate
+```
+
+5. Após as dependências terem sido instaladas, ainda na pasta "server" execute o BackEnd:
 
 ```console
 npm start devStart
 ```
 
-5. Após isso, ja na pasta "client" execute o FrontEnd:
+6. Após isso, ja na pasta "client" execute o FrontEnd:
 
 ```console
 npm start
 ```
 
-6. Só isso! O projeto já está rodando na sua máquina! 🎉
+7. Só isso! O projeto já está rodando na sua máquina! 🎉
