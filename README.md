@@ -20,9 +20,11 @@ npm install
 
 2. Após instalar as dependencias do Client, navegue até a pasta "server" e utilize o mesmo comando do passo anterior.
 
-3. Após as dependências terem sido instaladas, ainda na pasta "server", crie um arquivo chamado .env e dentro dele, adicione a variavel DATABASE_URL com a URL configurada do seu Banco de Dados como no modelo a seguir:
-
-<img width="800" height="auto" src="./assets/img/prismaConnection.png" >
+3. Após a instalação das dependências da aplicação server, dentro da pasta "server", crie o arquivo .env e defina o DATABASEURL da seguinte forma:
+ 
+```console
+DATABASE_URL="postgresql://myuser:mypassword@localhost:5432/mydb?schema=public"
+```
 
 4. Após isso, ainda na pasta "server" execute o seguinte comando:
 
